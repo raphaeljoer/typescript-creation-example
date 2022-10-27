@@ -30,4 +30,6 @@ const input: InvoiceInput = {
 
 const invoice = Invoice.create(input);
 
+invoice.id = 87474;
+
 console.log(invoice);
