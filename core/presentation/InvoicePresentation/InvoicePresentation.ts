@@ -1,8 +1,6 @@
 import { MathAccuracyService } from '../../application/service/MathAccuracyService/MathAccuracy';
-import { MathAccuracyInterface } from '../../infra/gateway/MathAccuracy/protocol/MathAccuracyInterface';
 import { InvoicePresentationInputInterface } from '../InvoicePresentation/InvoicePresentationInputInterface';
 import { InvoicePresentationOutputInterface } from '../InvoicePresentation/InvoicePresentationOutputInterface';
-import { TenantAccuracySettingsOutputInterface } from '../settings/TenantAccuracySettings/TenantAccuracySettingsOutputInterface';
 
 type Input = InvoicePresentationInputInterface;
 type Output = InvoicePresentationOutputInterface;
