@@ -1,16 +1,18 @@
-import { MathPrecisionInterface } from '../../infra/MathPrecision/protocol/MathPresicisionInterface';
+import { MathAccuracyInterface } from '../../infra/gateway/MathAccuracy/protocol/MathAccuracyInterface';
 import { InvoicePresentationInputInterface } from '../InvoicePresentation/InvoicePresentationInputInterface';
 import { InvoicePresentationOutputInterface } from '../InvoicePresentation/InvoicePresentationOutputInterface';
+import { TentantAccuracySettings } from '../settings/TenantAccuracySettings/TenantAccuracySettings';
+import { TenantAccuracySettingsOutpurInterface } from '../settings/TenantAccuracySettings/TenantAccuracySettingsOutputInterface';
 
 type Input = InvoicePresentationInputInterface;
 type Output = InvoicePresentationOutputInterface;
+type TentantAccuracyInterface = TenantAccuracySettingsOutpurInterface;
 
 export class InvoicePresentation {
-  private readonly _math: MathPrecisionInterface;
-
-  constructor(mathPrecision: MathPrecisionInterface) {
-    this._math = mathPrecision;
-  }
+  constructor(
+    private readonly _math: MathAccuracyInterface,
+    private readonly _settings: TentantAccuracySettings
+  ) {}
 
   execute(input: Input): Readonly<Output> {
     return {
