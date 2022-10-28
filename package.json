@@ -2,5 +2,7 @@
   "name": "typescript",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "decimal.js": "^10.4.2"
+  }
 }
