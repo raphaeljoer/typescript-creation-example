@@ -11,6 +11,8 @@ const decimal = new DecimalMathAccuracy();
 const mathAccuracyService = new MathAccuracyService(decimal, settings);
 const invoicePresentation = new InvoicePresentation(mathAccuracyService);
 
-const output = invoicePresentation.execute(invoiceDataInput);
+const fullInvoice = invoicePresentation.execute(invoiceDataInput);
+const previewInvoice = invoicePresentation.preview(invoiceDataInput);
 
-console.log(output);
+console.log(fullInvoice);
+console.log(previewInvoice);
