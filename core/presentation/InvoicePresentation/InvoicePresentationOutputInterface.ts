@@ -1,5 +1,5 @@
 export type InvoicePresentationOutputInterface = {
   id: string;
-  totalAmount: number;
+  totalAmount: string;
   balanceDue: string;
 };
