@@ -13,7 +13,7 @@ export class InvoicePresentation {
       id: input.id,
       totalAmount: this._math.total(input.invoice_total),
       balanceDue: this._math.total(input.invoice_total),
-      percentageOfSomething: this._math.percentage(47),
+      discountPercent: this._math.percentage(input.discount_percent),
     };
   }
 }
