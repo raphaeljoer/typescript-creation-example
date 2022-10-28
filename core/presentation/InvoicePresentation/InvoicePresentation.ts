@@ -1,16 +1,15 @@
 import { MathAccuracyInterface } from '../../infra/gateway/MathAccuracy/protocol/MathAccuracyInterface';
 import { InvoicePresentationInputInterface } from '../InvoicePresentation/InvoicePresentationInputInterface';
 import { InvoicePresentationOutputInterface } from '../InvoicePresentation/InvoicePresentationOutputInterface';
-import { TenantAccuracySettingsOutpurInterface } from '../settings/TenantAccuracySettings/TenantAccuracySettingsOutputInterface';
+import { TenantAccuracySettingsOutputInterface } from '../settings/TenantAccuracySettings/TenantAccuracySettingsOutputInterface';
 
 type Input = InvoicePresentationInputInterface;
 type Output = InvoicePresentationOutputInterface;
-type TentantAccuracyInterface = TenantAccuracySettingsOutpurInterface;
 
 export class InvoicePresentation {
   constructor(
     private readonly _math: MathAccuracyInterface,
-    private readonly _settings: TentantAccuracyInterface
+    private readonly _settings: TenantAccuracySettingsOutputInterface
   ) {}
 
   total(value: string | number) {
