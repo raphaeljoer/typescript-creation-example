@@ -11,8 +11,8 @@ export class InvoicePresentation {
   execute(input: Input): Readonly<Output> {
     return {
       id: input.id,
-      totalAmount: this._math.total(input.total_amount),
-      balanceDue: this._math.total(input.total_amount),
+      totalAmount: this._math.total(input.invoice_total),
+      balanceDue: this._math.total(input.invoice_total),
       percentageOfSomething: this._math.percentage(47),
     };
   }
