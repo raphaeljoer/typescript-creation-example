@@ -7,7 +7,7 @@ export type InvoicePresentationInputInterface = {
   due_date: string | null;
   created_at: string;
   posting_date: string | null;
-  discount_percent: number | null;
+  discount_percent: string;
   invoice_total: number | null;
   invoice_total_in_system_currency: number | null;
   invoice_total_in_foreign_currency: number | null;
