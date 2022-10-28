@@ -8,9 +8,10 @@ const tentantAccuracySettings = new TentantAccuracySettings();
 const settings = tentantAccuracySettings.execute(tenantSettingsDataInput);
 const decimal = new DecimalMathAccuracy();
 const mathAccuracyService = new MathAccuracyService(decimal, settings);
-
 const invoicePresentation = new InvoicePresentation(mathAccuracyService);
 
-const output = invoicePresentation.execute({ id: '123', total_amount: 1250 });
+const apiResponse = { id: '123', total_amount: 1250 };
+
+const output = invoicePresentation.execute(apiResponse);
 
 console.log(output);
