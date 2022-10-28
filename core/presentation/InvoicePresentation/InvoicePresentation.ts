@@ -15,8 +15,8 @@ export class InvoicePresentation {
   execute(input: Input): Readonly<Output> {
     return {
       id: input.id,
-      totalAmount: this._math.decimal(input.total_amount, 2, 2),
-      balanceDue: this._math.decimal(input.total_amount, 3, 2),
+      totalAmount: this._math.decimal(input.total_amount, 2),
+      balanceDue: this._math.decimal(input.total_amount, 3),
     };
   }
 }
