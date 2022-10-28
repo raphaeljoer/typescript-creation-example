@@ -6,7 +6,7 @@ type Input = InvoicePresentationInputInterface;
 type Output = InvoicePresentationOutputInterface;
 
 export class InvoicePresentation {
-  constructor(private readonly _math: MathAccuracyService) {}
+  constructor(private readonly _accuracy: MathAccuracyService) {}
 
   preview(input: Partial<Input>): Readonly<Partial<Output>> {
     return {
@@ -17,9 +17,9 @@ export class InvoicePresentation {
   execute(input: Partial<Input>): Readonly<Output> {
     return {
       id: input.id,
-      totalAmount: this._math.total(input.invoice_total),
-      balanceDue: this._math.total(input.invoice_total),
-      discountPercent: this._math.percentage(input.discount_percent),
+      totalAmount: this._accuracy.total(input.invoice_total),
+      balanceDue: this._accuracy.total(input.invoice_total),
+      discountPercent: this._accuracy.percentage(input.discount_percent),
     };
   }
 }
