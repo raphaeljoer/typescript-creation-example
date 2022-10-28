@@ -2,6 +2,7 @@ import { MathAccuracyService } from './core/application/service/MathAccuracyServ
 import { DecimalMathAccuracy } from './core/infra/gateway/MathAccuracy/DecimalMathAccuracy';
 import { InvoicePresentation } from './core/presentation/InvoicePresentation/InvoicePresentation';
 import { TentantAccuracySettings } from './core/presentation/settings/TenantAccuracySettings/TenantAccuracySettings';
+import { invoiceDataInput } from './data/invoiceDataInput';
 import { tenantSettingsDataInput } from './data/tenantSettingsDataInput';
 
 const tentantAccuracySettings = new TentantAccuracySettings();
@@ -10,8 +11,6 @@ const decimal = new DecimalMathAccuracy();
 const mathAccuracyService = new MathAccuracyService(decimal, settings);
 const invoicePresentation = new InvoicePresentation(mathAccuracyService);
 
-const apiResponse = { id: '123', total_amount: 1250 };
-
-const output = invoicePresentation.execute(apiResponse);
+const output = invoicePresentation.execute(invoiceDataInput);
 
 console.log(output);
