@@ -17,11 +17,16 @@ export class InvoicePresentation {
     return this._math.decimal(value, this._settings.totalsAccuracyDigits);
   }
 
+  percentage(value: string | number) {
+    return this._math.decimal(value, this._settings.percentagesAccuracyDigits);
+  }
+
   execute(input: Input): Readonly<Output> {
     return {
       id: input.id,
       totalAmount: this.total(input.total_amount),
       balanceDue: this.total(input.total_amount),
+      percentageOfSomething: this.percentage(47),
     };
   }
 }

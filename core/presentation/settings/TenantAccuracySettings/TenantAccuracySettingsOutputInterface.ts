@@ -1,4 +1,4 @@
-export interface TenantAccuracySettingsOutpurInterface {
+export interface TenantAccuracySettingsOutputInterface {
   localCurrencyId: string | null;
   localCurrencyExternalId: string | null;
   systemCurrencyId: string | null;

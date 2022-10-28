@@ -1,8 +1,8 @@
 import { TenantAccuracySettingsInputInterface } from '../TenantAccuracySettings/TenantAccuracySettingsInputInterface';
-import { TenantAccuracySettingsOutpurInterface } from '../TenantAccuracySettings/TenantAccuracySettingsOutputInterface';
+import { TenantAccuracySettingsOutputInterface } from '../TenantAccuracySettings/TenantAccuracySettingsOutputInterface';
 
 type Input = TenantAccuracySettingsInputInterface;
-type Output = TenantAccuracySettingsOutpurInterface;
+type Output = TenantAccuracySettingsOutputInterface;
 
 export class TentantAccuracySettings {
   execute(input: Input): Readonly<Output> {
